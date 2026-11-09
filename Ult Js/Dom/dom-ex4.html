@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Example4</title>
+</head>
+<body>
+    <input type="text" id="myInput" placeholder="Enter your name">
+    <p id="result"></p>
+    <script>
+        const nam=document.getElementById('myInput');
+        const p= document.getElementById("result");
+        nam.addEventListener("input",function(){
+        p.textContent=this.value;
+        });
+    </script>
+</body>
+</html>

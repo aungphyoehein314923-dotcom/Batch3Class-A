@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create and Append Element Example</title>
+</head>
+<body>
+    <div id="container">
+        <h2>Original Heading</h2>
+    </div>
+    <script>
+        const container=document.getElementById('container');
+        const newParagrapgh = document.createElement("p");
+        newParagrapgh.textContent='This is text created and added via Javascript in memory';
+        container.appendChild(newParagrapgh);
+    </script>
+</body>
+</html>

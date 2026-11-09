@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <h2>Original Heading</h2>
+    </div>
+    <div>
+        <button id="actionBtn"> Click Here</button>
+    </div>
+    <script>
+        const actonBtn=document.getElementById('actionBtn');
+        const container=document.getElementById('container');
+
+        actonBtn.addEventListener('click', function(){
+            const newParagraph = document.createElement('p');
+            newParagraph.textContent= "Button was Clicked New Element added via Event Listener.";
+            container.appendChild(newParagraph);
+        });
+    </script>
+</body>
+</html>

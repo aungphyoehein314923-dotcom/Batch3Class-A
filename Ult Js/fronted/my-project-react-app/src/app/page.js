@@ -10,6 +10,9 @@ import Profile from "@/components/profile";
 import StudentList from "@/components/studentlist";
 import UserProfile from "@/components/user-profile";
 import SkillList from "@/components/skill-list";
+import InputExample from "@/components/input-example";
+import ToogleMessage from "@/components/toogle-message";
+import TodoApp from "@/components/todo-app";
 
 export default function Home() {
   const user = {
@@ -38,6 +41,10 @@ export default function Home() {
       <Header />
       <main style={{ padding: "lerm" }}>
         <h1>Home Page</h1>
+        <TodoApp/>
+        <Message/>
+        <ToogleMessage/>
+        <InputExample/>
         <Button onClick={handelClick} />
         <UserProfile users={users} />
         <Profile user={user} />

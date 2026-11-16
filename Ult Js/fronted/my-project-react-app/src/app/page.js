@@ -10,10 +10,11 @@ import Profile from "@/components/profile";
 import StudentList from "@/components/studentlist";
 import UserProfile from "@/components/user-profile";
 import SkillList from "@/components/skill-list";
+import CardWrapper from "@/components/card-wapper";
+import CustomButton from "@/components/custom-button";
 import InputExample from "@/components/input-example";
 import ToogleMessage from "@/components/toogle-message";
 import TodoApp from "@/components/todo-app";
-
 export default function Home() {
   const user = {
     name: "Aung Aung",
@@ -41,15 +42,22 @@ export default function Home() {
       <Header />
       <main style={{ padding: "lerm" }}>
         <h1>Home Page</h1>
-        <TodoApp/>
-        <Message/>
-        <ToogleMessage/>
-        <InputExample/>
+        <TodoApp />
+        <Message />
+        <ToogleMessage />
+        <InputExample />
         <Button onClick={handelClick} />
         <UserProfile users={users} />
+        <CardWrapper>
         <Profile user={user} />
+        </CardWrapper>
+        <CardWrapper>
         <SkillList skills={skills} />
+        </CardWrapper>
         <StudentList students={students} />
+        <CardWrapper>
+          <CustomButton onClick={handelClick} />
+        </CardWrapper>
         <Card
           title="React Basis"
           description=" Learn about Component and Props" />

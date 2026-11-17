@@ -15,6 +15,10 @@ import CustomButton from "@/components/custom-button";
 import InputExample from "@/components/input-example";
 import ToogleMessage from "@/components/toogle-message";
 import TodoApp from "@/components/todo-app";
+import StudentManagement from "@/components/student-management";
+import LocalImage from "@/components/local-image";
+import RemoteImage from "@/components/remote-image";
+
 export default function Home() {
   const user = {
     name: "Aung Aung",
@@ -42,17 +46,21 @@ export default function Home() {
       <Header />
       <main style={{ padding: "lerm" }}>
         <h1>Home Page</h1>
+
+        <LocalImage />
         <TodoApp />
         <Message />
+        <RemoteImage />
         <ToogleMessage />
         <InputExample />
+        <StudentManagement />
         <Button onClick={handelClick} />
         <UserProfile users={users} />
         <CardWrapper>
-        <Profile user={user} />
+          <Profile user={user} />
         </CardWrapper>
         <CardWrapper>
-        <SkillList skills={skills} />
+          <SkillList skills={skills} />
         </CardWrapper>
         <StudentList students={students} />
         <CardWrapper>

@@ -18,6 +18,13 @@ import TodoApp from "@/components/todo-app";
 import StudentManagement from "@/components/student-management";
 import LocalImage from "@/components/local-image";
 import RemoteImage from "@/components/remote-image";
+import ProfileCard from "@/components/profile-card";
+import ActionCard from "@/components/action-card";
+
+
+
+
+
 
 export default function Home() {
   const user = {
@@ -41,12 +48,15 @@ export default function Home() {
     "JavaScript",
     "Node.js"
   ]
+  
   return (
     <div>
       <Header />
       <main style={{ padding: "lerm" }}>
         <h1>Home Page</h1>
-
+        <Button/>
+        <ProfileCard />
+        <ActionCard />
         <LocalImage />
         <TodoApp />
         <Message />

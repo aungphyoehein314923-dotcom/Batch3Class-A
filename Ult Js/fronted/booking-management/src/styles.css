@@ -1,0 +1,528 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Myanmar:wght@400;500;600&display=swap');
+
+:root {
+    font-family: Inter, 'Noto Sans Myanmar', sans-serif;
+    color: #343957;
+    background: #eef2fa;
+    font-synthesis: none
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    min-width: 320px;
+    background: #eef2fa
+}
+
+.app {
+    min-height: 100vh;
+    background: #eef2fa
+}
+
+.list-page,
+.form-page {
+    width: 90%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 70px 0 80px
+}
+
+.list-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 18px 5px
+}
+
+.list-head h1 {
+    font-size: 22px;
+    font-weight: 500;
+    margin: 0
+}
+
+.create {
+    width: 34%;
+    height: 40px;
+    border: 0;
+    border-radius: 6px;
+    background: #2e8060;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 18px
+}
+
+.booking {
+    height: 171px;
+    background: #fff;
+    border: 1px solid #d9dce5;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 150px 190px 190px 190px 1fr 125px;
+    align-items: center;
+    padding: 20px 48px;
+    gap: 8px
+}
+
+.student-pic {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    justify-self: center
+}
+
+.student-name {
+    font-size: 18px;
+    color: #090909;
+    margin-bottom: 6px
+}
+
+.parent-name {
+    font-size: 13px;
+    color: #9398a8
+}
+
+.label-with-icon {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: #9297a9;
+    font-size: 13px;
+    margin-bottom: 6px
+}
+
+.label-with-icon img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain
+}
+
+.status {
+    font-size: 14px
+}
+
+.status.pending {
+    color: #e99b12
+}
+
+.status.accepted {
+    color: #737dc4
+}
+
+.status.rejected {
+    color: #d83d3d
+}
+
+.status.enrolled {
+    color: #2e8060
+}
+
+.date-area strong,
+.time-area strong {
+    font-size: 14px;
+    font-weight: 700;
+    white-space: nowrap
+}
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 24px
+}
+
+.actions button {
+    border: 0;
+    background: transparent;
+    padding: 3px;
+    cursor: pointer
+}
+
+.actions img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain
+}
+
+.form-page {
+    padding-top: 32px
+}
+
+.back {
+    font-size: 22px;
+    color: #343957;
+    border: 0;
+    background: none;
+    padding: 0;
+    margin: 0 0 28px;
+    cursor: pointer
+}
+
+.form-card {
+    background: #fff;
+    border-radius: 20px;
+    min-height: 790px;
+    box-shadow: 0 2px 8px #34395715;
+    padding: 42px 28px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 11%;
+    align-items: start
+}
+
+.booking-form {
+    width: 100%;
+    max-width: 630px
+}
+
+.fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 17px 22px
+}
+
+.fields label {
+    font-size: 13px;
+    color: #3e4564;
+    display: flex;
+    flex-direction: column;
+    gap: 8px
+}
+
+.fields input,
+.fields select {
+    height: 42px;
+    border: 1px solid #e1e3e9;
+    border-radius: 7px;
+    padding: 0 12px;
+    font: 14px Inter, 'Noto Sans Myanmar', sans-serif;
+    color: #343957;
+    background: #fff;
+    min-width: 0
+}
+
+.fields input:focus,
+.fields select:focus {
+    outline: 0;
+    border-color: #e99b12
+}
+
+.wide {
+    grid-column: 1/-1
+}
+
+.fee {
+    height: 42px;
+    background: #f3f4f7;
+    border: 1px solid #e5e7ed;
+    border-radius: 7px;
+    text-align: right;
+    padding: 11px 13px;
+    font-size: 13px
+}
+
+.upload {
+    height: 42px;
+    display: flex;
+    align-items: center;
+    background: #f3f4f7;
+    border: 1px solid #e3e5ec;
+    border-radius: 7px;
+    position: relative;
+    overflow: hidden
+}
+
+.upload span {
+    height: 42px;
+    width: 58px;
+    background: #e99b12;
+    color: white;
+    display: grid;
+    place-items: center;
+    font-size: 22px
+}
+
+.upload input {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+    width: 100%;
+    height: 100%
+}
+
+.upload small {
+    padding: 0 12px;
+    color: #969bad;
+    font-size: 13px
+}
+
+.book-btn,
+.update-btn {
+    height: 40px;
+    width: 100%;
+    border: 0;
+    border-radius: 6px;
+    background: #343957;
+    color: #fff;
+    font-size: 14px;
+    margin-top: 12px;
+    cursor: pointer
+}
+
+.update-btn {
+    background: #e99b12
+}
+
+.instructions {
+    max-width: 600px
+}
+
+.instructions h2 {
+    font-family: Georgia, serif;
+    font-size: 26px;
+    font-weight: 400;
+    margin: 0 0 20px
+}
+
+.instructions ul {
+    padding-left: 20px;
+    margin: 0
+}
+
+.instructions li {
+    font-family: 'Noto Sans Myanmar', Inter, sans-serif;
+    font-size: 14px;
+    line-height: 1.85;
+    margin: 0 0 5px;
+    color: #343957
+}
+
+.shade {
+    position: fixed;
+    inset: 0;
+    background: #1d223c88;
+    display: grid;
+    place-items: center;
+    padding: 20px
+}
+
+.dialog {
+    background: #fff;
+    border-radius: 16px;
+    padding: 28px;
+    width: min(650px, 100%);
+    position: relative
+}
+
+.dialog h2 {
+    margin-top: 0
+}
+
+.x {
+    position: absolute;
+    right: 18px;
+    top: 15px;
+    border: 0;
+    background: #f2f3f7;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 20px
+}
+
+.details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px
+}
+
+.details small {
+    display: block;
+    color: #9297a9;
+    margin-bottom: 5px
+}
+
+.details strong {
+    font-size: 13px
+}
+
+.status-control {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0 8px
+}
+
+.status-control select {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px
+}
+
+@media(max-width:1100px) {
+    .booking {
+        grid-template-columns: 90px 1.2fr 1fr 1fr 1.4fr 80px;
+        padding: 18px 20px
+    }
+
+    .student-pic {
+        width: 75px;
+        height: 75px
+    }
+
+    .form-card {
+        gap: 5%;
+        padding: 30px 22px
+    }
+
+    .instructions li {
+        font-size: 12px
+    }
+}
+
+@media(max-width:760px) {
+
+    .list-page,
+    .form-page {
+        width: 94%;
+        padding-top: 28px
+    }
+
+    .booking {
+        height: auto;
+        min-height: 130px;
+        grid-template-columns: 70px 1fr 90px 60px;
+        padding: 14px;
+        gap: 8px
+    }
+
+    .student-pic {
+        width: 65px;
+        height: 65px
+    }
+
+    .status-area {
+        grid-column: 3;
+        grid-row: 1
+    }
+
+    .date-area,
+    .time-area {
+        grid-column: 2
+    }
+
+    .date-area {
+        grid-row: 2
+    }
+
+    .time-area {
+        grid-column: 3/5;
+        grid-row: 2
+    }
+
+    .date-area strong,
+    .time-area strong {
+        font-size: 11px
+    }
+
+    .actions {
+        grid-column: 4;
+        grid-row: 1;
+        gap: 8px
+    }
+
+    .actions img {
+        width: 20px;
+        height: 20px
+    }
+
+    .student-name {
+        font-size: 14px
+    }
+
+    .parent-name {
+        font-size: 11px
+    }
+
+    .create {
+        width: 45%
+    }
+
+    .form-card {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        min-height: 0;
+        padding: 24px 18px
+    }
+
+    .instructions {
+        order: 2
+    }
+
+    .fields {
+        gap: 14px 10px
+    }
+
+    .back {
+        font-size: 16px
+    }
+
+    .instructions h2 {
+        font-size: 23px
+    }
+
+    .instructions li {
+        font-size: 12px
+    }
+}
+
+@media(max-width:430px) {
+    .fields {
+        grid-template-columns: 1fr
+    }
+
+    .wide {
+        grid-column: auto
+    }
+
+    .booking {
+        grid-template-columns: 55px 1fr 78px 45px;
+        padding: 10px
+    }
+
+    .student-pic {
+        width: 52px;
+        height: 52px
+    }
+
+    .label-with-icon img {
+        width: 15px;
+        height: 15px
+    }
+
+    .label-with-icon {
+        font-size: 10px;
+        gap: 4px
+    }
+
+    .status {
+        font-size: 10px
+    }
+
+    .date-area strong,
+    .time-area strong {
+        font-size: 10px
+    }
+
+    .details {
+        grid-template-columns: 1fr
+    }
+}
